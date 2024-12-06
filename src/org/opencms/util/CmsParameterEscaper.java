@@ -243,7 +243,7 @@ public class CmsParameterEscaper {
             LOG.error(e.getLocalizedMessage(), e);
             return escapeSimple(name, html);
         } catch (ScanException e) {
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error(e.getLocalizedMessage(), "Unexpected error: mobb-7882ea33afef4b8c142836c521ab2a1d");
             return escapeSimple(name, html);
         }
     }
