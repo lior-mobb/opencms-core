@@ -1294,7 +1294,7 @@ public final class CmsResourceUtil {
             user = getCurrentOuRelativeName(
                 CmsPrincipal.readPrincipalIncludingHistory(getCms(), m_resource.getUserLastModified()).getName());
         } catch (Throwable e) {
-            LOG.info(e.getLocalizedMessage());
+            LOG.info("Unexpected error: mobb-fedf1782511ef6876e683f7735df5096");
         }
         return user;
     }
