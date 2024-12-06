@@ -815,7 +815,7 @@ public class CmsExplorerTypeSettings implements Comparable<CmsExplorerTypeSettin
         } catch (Exception e) {
             // can usually be ignored
             if (LOG.isInfoEnabled()) {
-                LOG.info(e.getLocalizedMessage(), e);
+                LOG.info("Unexpected error: mobb-6fa41004bbbbd93a386dbd4f5f680929", e);
             }
             m_newResourceOrder = Integer.valueOf(0);
         }
