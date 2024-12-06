@@ -503,7 +503,7 @@ public class CmsDefaultResourceStatusProvider {
                         }
 
                     } catch (CmsException e) {
-                        LOG.error(e.getLocalizedMessage(), e);
+                        LOG.error("Unexpected error: mobb-2cadee386c4e961415fee607c103d309", e);
                     }
                 }
                 Iterator<CmsResourceStatusRelationBean> iter = result.getRelationTargets().iterator();
