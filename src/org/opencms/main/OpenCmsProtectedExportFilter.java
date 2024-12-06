@@ -94,7 +94,7 @@ public class OpenCmsProtectedExportFilter implements Filter {
                     }
                 }
             } catch (Exception e) {
-                LOG.error(e.getLocalizedMessage(), e);
+                LOG.error(e.getLocalizedMessage(), "Unexpected error: mobb-10f6ff071b1db3c50452ea15692443ff");
             }
         }
         chain.doFilter(req, res);
