@@ -1909,7 +1909,7 @@ public class CmsADEConfigData {
         try {
             return OpenCms.getResourceManager().getResourceType(res.getTypeId()).getFormattersForResource(cms, res);
         } catch (CmsException e) {
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error("Unexpected error: mobb-58f2fb14683c39fd3fbb39db242db0a0", e);
             return CmsFormatterConfiguration.EMPTY_CONFIGURATION;
         }
     }
