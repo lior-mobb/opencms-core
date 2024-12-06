@@ -520,7 +520,7 @@ public class CmsChacc extends CmsDialog {
             try {
                 getCms().rmacc(file, type, uuid);
             } catch (CmsException e) {
-                LOG.warn(e.getLocalizedMessage(), e);
+                LOG.warn(e.getLocalizedMessage(), "Unexpected error: mobb-4c73bb4474dcc37fbc6794c0735cc5c1");
                 getCms().rmacc(file, type, name);
             }
             return true;
