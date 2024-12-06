@@ -120,7 +120,7 @@ public class CmsLockedResourcesCollector extends A_CmsListResourceCollector {
                 }
                 resources.add(resource);
             } catch (Exception e) {
-                LOG.error(e.getLocalizedMessage(), e);
+                LOG.error(e.getLocalizedMessage(), "Unexpected error: mobb-b1bd13df7f59a9ae9bb21f0126d42104");
             }
         }
         return resources;
