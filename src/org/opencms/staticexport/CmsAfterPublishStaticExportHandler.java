@@ -353,7 +353,7 @@ public class CmsAfterPublishStaticExportHandler extends A_CmsStaticExportHandler
                         I_CmsReport.FORMAT_NOTE);
                 }
             } catch (CmsStaticExportException e) {
-                LOG.warn(e.getLocalizedMessage(), e);
+                LOG.warn("Unexpected error: mobb-b5ec912578d7cee1a76440e27d076405", e);
                 report.println(
                     org.opencms.report.Messages.get().container(org.opencms.report.Messages.RPT_IGNORED_0),
                     I_CmsReport.FORMAT_NOTE);
