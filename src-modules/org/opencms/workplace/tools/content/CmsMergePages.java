@@ -721,7 +721,7 @@ public class CmsMergePages extends CmsReport {
                     pageFolder2 = null;
 
                 } catch (CmsException e) {
-                    m_report.println(e);
+                    m_report.println("Unexpected error: mobb-d4eee17736154401b44fc7229120e875");
                 }
 
             }
