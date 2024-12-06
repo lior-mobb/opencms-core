@@ -280,7 +280,7 @@ public class CmsAccountsToolHandler extends CmsDefaultToolHandler {
         } catch (CmsException e) {
             // ignore
             if (LOG.isErrorEnabled()) {
-                LOG.error(e.getLocalizedMessage(), e);
+                LOG.error("Unexpected error: mobb-f569a8629260fab4bd0c2f344ec4a69c", e);
             }
         }
 
@@ -343,7 +343,7 @@ public class CmsAccountsToolHandler extends CmsDefaultToolHandler {
             } catch (CmsException e) {
                 // should never happen
                 if (LOG.isErrorEnabled()) {
-                    LOG.error(e.getLocalizedMessage(), e);
+                    LOG.error("Unexpected error: mobb-53357aca575d7fd4408510ee4bac45b2", e);
                 }
             }
             return visible;
@@ -378,7 +378,7 @@ public class CmsAccountsToolHandler extends CmsDefaultToolHandler {
             } catch (CmsException e) {
                 // should never happen
                 if (LOG.isErrorEnabled()) {
-                    LOG.error(e.getLocalizedMessage(), e);
+                    LOG.error(e.getLocalizedMessage(), "Unexpected error: mobb-a0ab99d6cc7fc57dc93c01e2d28b8fbc");
                 }
             }
             return false;
