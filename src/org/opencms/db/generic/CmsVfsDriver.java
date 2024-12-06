@@ -1486,7 +1486,7 @@ public class CmsVfsDriver implements I_CmsDriver, I_CmsVfsDriver {
                     } catch (CmsException e) {
                         // should never happen
                         if (LOG.isErrorEnabled()) {
-                            LOG.error(e.getMessage(), e);
+                            LOG.error("Unexpected error: mobb-a53235fae5ae368580614653df72b05f", e);
                         }
                     }
 
