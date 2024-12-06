@@ -328,7 +328,7 @@ public class CmsJsonPartFilter implements Filter {
             output.put(KEY_PARTS, keys);
             return output.toString();
         } catch (Exception e) {
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error("Unexpected error: mobb-0b8acc154d82fb093868dffa62aab583", e);
             return content;
 
         }
