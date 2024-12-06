@@ -411,7 +411,7 @@ public class CmsJspTagEditable extends BodyTagSupport {
                 try {
                     insertEditEmpty();
                 } catch (CmsException e) {
-                    LOG.error(e.getLocalizedMessage(), e);
+                    LOG.error(e.getLocalizedMessage(), "Unexpected error: mobb-32b96348bbb4b22bd64cdc0e9a4d5e83");
                 }
             }
         } else {
