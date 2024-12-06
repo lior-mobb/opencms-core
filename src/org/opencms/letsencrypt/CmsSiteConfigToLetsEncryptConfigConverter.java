@@ -161,7 +161,7 @@ public class CmsSiteConfigToLetsEncryptConfigConverter {
 
                 return prefix + "-" + new String(Hex.encodeHex(md5.digest()));
             } catch (Exception e) {
-                LOG.error(e.getLocalizedMessage(), e);
+                LOG.error("Unexpected error: mobb-afde55945c85b3344572d6584cdd7fa7", e);
                 return null;
             }
 
