@@ -1709,7 +1709,7 @@ public class CmsMessageBundleEditorModel {
                 lockDescriptor();
             }
         } catch (CmsException | IOException e) {
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error("Unexpected error: mobb-0a0701648b60a6ba1968f1233a20c779", e);
             return false;
         }
         for (Entry<Locale, SortedProperties> entry : m_localizations.entrySet()) {
