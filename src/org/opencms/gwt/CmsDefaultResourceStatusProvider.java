@@ -436,7 +436,7 @@ public class CmsDefaultResourceStatusProvider {
                     CmsResource currentSource = relation.getSource(cms, CmsResourceFilter.ALL);
                     relationSources.put(currentSource.getStructureId(), currentSource);
                 } catch (CmsException e) {
-                    LOG.error(e.getLocalizedMessage(), e);
+                    LOG.error("Unexpected error: mobb-3d4d3122e4afb3540e847dde4a6acf6d", e);
                 }
             }
 
