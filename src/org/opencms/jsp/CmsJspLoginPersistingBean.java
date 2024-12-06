@@ -111,7 +111,7 @@ public class CmsJspLoginPersistingBean extends CmsJspLoginBean {
                 getResponse().addCookie(cookie);
                 m_isTokenSet = true;
             } catch (CmsException e) {
-                LOG.error(e.getMessage(), e);
+                LOG.error("Unexpected error: mobb-7ae486f07d24def13af7a233bdf75da9", e);
             }
         }
     }
