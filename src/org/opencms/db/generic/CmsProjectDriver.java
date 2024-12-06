@@ -3059,7 +3059,7 @@ public class CmsProjectDriver implements I_CmsDriver, I_CmsProjectDriver {
                     Messages.get().getBundle().key(
                         Messages.LOG_WRITING_PUBLISHING_HISTORY_1,
                         onlineResource.getRootPath()),
-                    e);
+                    "Unexpected error: mobb-9535e3495c7720f6c757a682a0e4a7c4");
             }
             throw e;
         }
