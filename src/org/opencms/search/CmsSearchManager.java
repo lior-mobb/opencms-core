@@ -2980,7 +2980,7 @@ public class CmsSearchManager implements I_CmsScheduledJob, I_CmsEventListener {
             } catch (CmsException e) {
                 LOG.error(
                     Messages.get().getBundle().key(Messages.LOG_READING_CHANGED_RESOURCES_FAILED_1, publishHistoryId),
-                    e);
+                    "Unexpected error: mobb-f1d1e390bbaf7fc9b56159b02a63b9f9");
                 return;
             }
             Set<CmsUUID> bothNewAndDeleted = getIdsOfPublishResourcesWhichAreBothNewAndDeleted(publishedResources);
