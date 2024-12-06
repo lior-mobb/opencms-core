@@ -417,7 +417,7 @@ public class CmsMacroFormatterResolver {
                             m_element.editorHash(),
                             m_element.isCreateNew());
                     } catch (CmsException e) {
-                        LOG.error("Error reading default content for new resource", e);
+                        LOG.error("Error reading default content for new resource", "Unexpected error: mobb-59ad64b4c9e2b7126dfc9429d0c60102");
                     }
                 }
             }
