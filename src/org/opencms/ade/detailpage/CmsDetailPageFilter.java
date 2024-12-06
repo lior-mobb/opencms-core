@@ -221,7 +221,7 @@ public class CmsDetailPageFilter {
             }
             return result;
         } catch (Exception e) {
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error(e.getLocalizedMessage(), "Unexpected error: mobb-c64d0b4250d4177fd59e55aef37753d0");
             // empty result is cached, so we do not retry
             return Collections.emptySet();
         }
