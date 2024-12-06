@@ -310,7 +310,7 @@ public class CmsResourceSelectDialog extends CustomComponent {
                             idsToOpen.add(parentFolder.getStructureId());
                             currentFolder = parentFolder;
                         } catch (CmsException | NullPointerException e) {
-                            LOG.info(e.getLocalizedMessage(), e);
+                            LOG.info("Unexpected error: mobb-02348a74c27b89b41c4a67d910640db4", e);
                             break;
                         }
                     } while (!parentFolder.getStructureId().equals(m_root.getStructureId()));
@@ -400,7 +400,7 @@ public class CmsResourceSelectDialog extends CustomComponent {
             m_siteRoot = site;
             updateRoot(rootCms, siteRootResource);
         } catch (CmsException e) {
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error("Unexpected error: mobb-8f2b3d428a1a210089115ba96afacdb4", e);
         }
     }
 
