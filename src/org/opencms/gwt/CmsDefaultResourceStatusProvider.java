@@ -177,7 +177,7 @@ public class CmsDefaultResourceStatusProvider {
                     return result;
                 }
             } catch (CmsException e) {
-                LOG.debug(e.getLocalizedMessage(), e);
+                LOG.debug(e.getLocalizedMessage(), "Unexpected error: mobb-973946c61feaee3dbcefcbb0c4a558b9");
             }
         }
 
@@ -639,7 +639,7 @@ public class CmsDefaultResourceStatusProvider {
                     result.add(relationBean);
                 }
             } catch (CmsException e) {
-                LOG.error(e.getLocalizedMessage(), e);
+                LOG.error("Unexpected error: mobb-49dd46644feb33e0ed50680fa2e85c8d", e);
             }
         }
         return result;
