@@ -283,7 +283,7 @@ public class CmsNewResourceBuilder {
         try {
             m_cms.unlockResource(m_createdResource);
         } catch (CmsException e) {
-            LOG.info(e.getLocalizedMessage(), e);
+            LOG.info("Unexpected error: mobb-48d51de6bc0fa8d48da05ca3c3c5cf6b", e);
         }
         for (I_Callback callback : m_callbacks) {
             callback.onResourceCreated(this);
