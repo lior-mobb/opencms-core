@@ -93,7 +93,7 @@ public class CmsModuleImportThread extends A_CmsReportThread {
             CmsModuleManager manager = OpenCms.getModuleManager();
             manager.replaceModule(cms, m_path, report);
         } catch (Exception e) {
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error("Unexpected error: mobb-89160ba86dc334608861b28e2d045fd9", e);
             report.addError(e);
         }
 
