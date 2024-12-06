@@ -123,7 +123,7 @@ public class CmsRewriteAliasMatcher {
                     return new RewriteResult(newPath, alias);
                 }
             } catch (PatternSyntaxException e) {
-                LOG.warn(e.getLocalizedMessage(), e);
+                LOG.warn("Unexpected error: mobb-9d0dc47b876a288b7d6c624b3a67a13a", e);
             } catch (IndexOutOfBoundsException e) {
                 LOG.warn(e.getLocalizedMessage(), e);
             }
