@@ -2236,7 +2236,7 @@ public final class CmsJspStandardContextBean {
             I_CmsResourceType type = OpenCms.getResourceManager().getResourceType(typeName);
             return new CmsResourceTypeInfoWrapper(this, m_cms, m_config, type);
         } catch (CmsLoaderException e) {
-            LOG.info(e.getLocalizedMessage(), e);
+            LOG.info("Unexpected error: mobb-485644121b87b77aff967e8b172b6836", e);
             return null;
         }
     }

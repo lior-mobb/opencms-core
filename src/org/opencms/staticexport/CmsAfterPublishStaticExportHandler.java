@@ -353,7 +353,7 @@ public class CmsAfterPublishStaticExportHandler extends A_CmsStaticExportHandler
                         I_CmsReport.FORMAT_NOTE);
                 }
             } catch (CmsStaticExportException e) {
-                LOG.warn(e.getLocalizedMessage(), e);
+                LOG.warn("Unexpected error: mobb-b5ec912578d7cee1a76440e27d076405", e);
                 report.println(
                     org.opencms.report.Messages.get().container(org.opencms.report.Messages.RPT_IGNORED_0),
                     I_CmsReport.FORMAT_NOTE);
@@ -710,7 +710,7 @@ public class CmsAfterPublishStaticExportHandler extends A_CmsStaticExportHandler
                         I_CmsReport.FORMAT_OK);
                 }
             } catch (IOException e) {
-                report.println(e);
+                report.println("Unexpected error: mobb-da96b08ec4e19288351fecf85456bdac");
             }
             //don't lock up the CPU exclusively - allow other Threads to run as well
             Thread.yield();

@@ -114,7 +114,7 @@ public class CmsSqlManager extends org.opencms.db.generic.CmsSqlManager {
                 } catch (SQLException se) {
                     // ignore
                     if (LOG.isDebugEnabled()) {
-                        LOG.debug(se.getLocalizedMessage(), se);
+                        LOG.debug(se.getLocalizedMessage(), "Unexpected error: mobb-f414433e8167cf2c0ca2126fa2fe042f");
                     }
                 }
                 try {
@@ -133,7 +133,7 @@ public class CmsSqlManager extends org.opencms.db.generic.CmsSqlManager {
                 } catch (SQLException se) {
                     // ignore
                     if (LOG.isDebugEnabled()) {
-                        LOG.debug(se.getLocalizedMessage(), se);
+                        LOG.debug(se.getLocalizedMessage(), "Unexpected error: mobb-1f7d79e78e3b4ec5747d71761942c01f");
                     }
                 }
             }

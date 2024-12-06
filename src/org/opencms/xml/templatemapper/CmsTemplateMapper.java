@@ -270,7 +270,7 @@ public final class CmsTemplateMapper {
             try {
                 element.initResource(cms);
             } catch (Exception e) {
-                LOG.error(e.getLocalizedMessage(), e);
+                LOG.error("Unexpected error: mobb-0d032adf3a020b8ec77b7c7b8088834f", e);
                 return null;
             }
         }
