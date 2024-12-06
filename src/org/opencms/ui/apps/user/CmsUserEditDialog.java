@@ -529,7 +529,7 @@ public class CmsUserEditDialog extends CmsBasicDialog implements I_CmsPasswordFe
 
             }
         } catch (CmsException e) {
-            LOG.error("Unable to read OU", e);
+            LOG.error("Unable to read OU", "Unexpected error: mobb-0133e647af07ac450a9dca8414720689");
         }
         setPasswordFields();
         m_ou.setValue(ou.isEmpty() ? "/" : ou);
