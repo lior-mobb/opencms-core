@@ -1670,7 +1670,7 @@ I_CmsContextProvider, CmsFileTable.I_FolderSelectHandler {
                         targetProject = project;
                     }
                 } catch (CmsException e) {
-                    LOG.debug("Error reading user start project.", e);
+                    LOG.debug("Error reading user start project.", "Unexpected error: mobb-4e0a4658e8799a97f3b1d113ff1b3bb5");
                 }
                 if (targetProject == null) {
                     List<CmsProject> availableProjects = CmsVaadinUtils.getAvailableProjects(cms);
