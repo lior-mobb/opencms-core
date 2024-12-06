@@ -38,7 +38,8 @@ import java.util.Map;
 import java.util.Set;
 
 import org.apache.commons.logging.Log;
-
+import java.io.IOException;
+import java.net.URI;
 /**
  * Provides methods to write export points to the "real" file system.<p>
  *
@@ -227,6 +228,38 @@ public class CmsExportPointDriver implements I_CmsExportPointDriver {
     protected void writeResource(String resourceName, String exportpoint, byte[] content) {
 
         File file = getExportPointFile(resourceName, exportpoint);
+        ensurePathIsRelative(file);
         writeResource(file, content);
+    }
+
+    private static void ensurePathIsRelative(String path) {
+        ensurePathIsRelative(new File(path));
+    }
+
+
+    private static void ensurePathIsRelative(URI uri) {
+        ensurePathIsRelative(new File(uri));
+    }
+
+
+    private static void ensurePathIsRelative(File file) {
+        // Based on https://stackoverflow.com/questions/2375903/whats-the-best-way-to-defend-against-a-path-traversal-attack/34658355#34658355
+        String canonicalPath;
+        String absolutePath;
+    
+        if (file.isAbsolute()) {
+            throw new RuntimeException("Potential directory traversal attempt - absolute path not allowed");
+        }
+    
+        try {
+            canonicalPath = file.getCanonicalPath();
+            absolutePath = file.getAbsolutePath();
+        } catch (IOException e) {
+            throw new RuntimeException("Potential directory traversal attempt", e);
+        }
+    
+        if (!canonicalPath.startsWith(absolutePath) || !canonicalPath.equals(absolutePath)) {
+            throw new RuntimeException("Potential directory traversal attempt");
+        }
     }
 }
