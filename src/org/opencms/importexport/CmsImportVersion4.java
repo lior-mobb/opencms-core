@@ -256,7 +256,7 @@ public class CmsImportVersion4 extends A_CmsImport {
                     LOG.warn(Messages.get().getBundle().key(Messages.LOG_IMPORTEXPORT_REWRITING_1, res.getRootPath()));
                 }
                 if (LOG.isDebugEnabled()) {
-                    LOG.debug(e.getLocalizedMessage(), e);
+                    LOG.debug("Unexpected error: mobb-688af5d68dde6c0af3d19ef833b9c1f6", e);
                 }
             }
             i++;
@@ -616,7 +616,7 @@ public class CmsImportVersion4 extends A_CmsImport {
                                             translatedName),
                                         e);
                                 }
-                                m_report.println(e);
+                                m_report.println("Unexpected error: mobb-b2b9381f2ec97225215ea4c18be87932");
                             }
                         }
 
