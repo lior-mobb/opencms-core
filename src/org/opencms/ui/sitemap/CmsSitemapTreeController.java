@@ -1139,7 +1139,7 @@ public class CmsSitemapTreeController {
             String title = CmsVaadinUtils.getMessageText(Messages.GUI_COPYPAGE_DIALOG_TITLE_0);
             context.start(title, dialog);
         } catch (CmsException e) {
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error(e.getLocalizedMessage(), "Unexpected error: mobb-d5326ec4051d09e37a3b92c99c2026b0");
             CmsErrorDialog.showErrorDialog(e);
         }
     }
