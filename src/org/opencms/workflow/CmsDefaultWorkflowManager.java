@@ -462,7 +462,7 @@ public class CmsDefaultWorkflowManager extends A_CmsWorkflowManager {
                         }
                         publish.publishResources(resourcesToPublish);
                     } catch (Exception ex) {
-                        LOG.error(ex.getLocalizedMessage(), ex);
+                        LOG.error("Unexpected error: mobb-f1b059a1dec282b65eabe5e5dabdb38a", ex);
                     }
                 }
             };
