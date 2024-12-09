@@ -360,7 +360,7 @@ class CmsConfigurationCache implements I_CmsGlobalConfigurationCache {
                 }
 
             } catch (Exception e) {
-                LOG.error(e.getLocalizedMessage(), e);
+                LOG.error(e.getLocalizedMessage(), "Unexpected error: mobb-c3c3596339de7341c1540300f8c53b8f");
             }
         }
         CmsLog.INIT.info(
@@ -528,7 +528,7 @@ class CmsConfigurationCache implements I_CmsGlobalConfigurationCache {
                     }
                 }
             } catch (CmsException e) {
-                LOG.error(e.getLocalizedMessage(), e);
+                LOG.error("Unexpected error: mobb-96aefe39d217281f409c205a1a692463", e);
             }
             Collections.sort(views, new CmsElementView.ElementViewComparator());
             Map<CmsUUID, CmsElementView> elementViews = new LinkedHashMap<CmsUUID, CmsElementView>();
@@ -710,7 +710,7 @@ class CmsConfigurationCache implements I_CmsGlobalConfigurationCache {
                     m_workQueue.add(config.getStructureId());
                 }
             } catch (Exception e) {
-                LOG.warn(e.getMessage(), e);
+                LOG.warn("Unexpected error: mobb-2212eba4ff42aea7447d048d530aeb97", e);
             }
         }
     }

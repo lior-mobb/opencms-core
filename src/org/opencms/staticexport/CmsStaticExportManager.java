@@ -1717,7 +1717,7 @@ public class CmsStaticExportManager implements I_CmsEventListener {
             try {
                 rule.setExportWorkPath(normalizeExportPath(rule.getExportWorkPathConfigured()));
             } catch (CmsIllegalArgumentException e) {
-                CmsLog.INIT.warn(e.getMessageContainer());
+                CmsLog.INIT.warn("Unexpected error: mobb-30b5a7d78fd496c905a96446c36c5a9f");
                 rule.setExportWorkPath(m_staticExportWorkPath);
             }
             rule.setRfsPrefix(normalizeRfsPrefix(rule.getRfsPrefixConfigured()));
@@ -2269,7 +2269,7 @@ public class CmsStaticExportManager implements I_CmsEventListener {
             m_handler = (I_CmsStaticExportHandler)Class.forName(handlerClassName).newInstance();
         } catch (Exception e) {
             // should never happen
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error(e.getLocalizedMessage(), "Unexpected error: mobb-00459aaccc09d2bf63c04f72d6299f39");
         }
     }
 

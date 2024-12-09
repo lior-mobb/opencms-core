@@ -937,7 +937,7 @@ public class CmsSearchManager implements I_CmsScheduledJob, I_CmsEventListener {
                     searchIndex.initialize();
                 } catch (CmsException e) {
                     // should never happen
-                    LOG.error(e.getMessage(), e);
+                    LOG.error("Unexpected error: mobb-901e58cd815752f4ac48a71001f52b56", e);
                 }
             }
         }
@@ -1022,7 +1022,7 @@ public class CmsSearchManager implements I_CmsScheduledJob, I_CmsEventListener {
                             Messages.get().getBundle().key(
                                 Messages.ERR_EVENT_REBUILD_SEARCHINDEX_1,
                                 indexNames == null ? "" : CmsStringUtil.collectionAsString(indexNames, ",")),
-                            e);
+                            "Unexpected error: mobb-5ca55b43e190a53dff565882e0f6933a");
                     }
                 }
                 break;
@@ -1710,7 +1710,7 @@ public class CmsSearchManager implements I_CmsScheduledJob, I_CmsEventListener {
             m_adminCms = OpenCms.initCmsObject(cms);
         } catch (CmsException e) {
             // this should never happen
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error("Unexpected error: mobb-f3242f4f491b2b6380bee809977dbba6", e);
         }
         // make sure the site root is the root site
         m_adminCms.getRequestContext().setSiteRoot("/");
