@@ -104,7 +104,7 @@ public class CmsSiteConfigToLetsEncryptConfigConverter {
                 }
                 return result.toString();
             } catch (Exception e) {
-                LOG.error(e.getLocalizedMessage(), e);
+                LOG.error(e.getLocalizedMessage(), "Unexpected error: mobb-4eb15312ce519e82943779ec2646bcb3");
                 return null;
             }
         }
@@ -431,7 +431,7 @@ public class CmsSiteConfigToLetsEncryptConfigConverter {
                     URI uri = new URI(wpServer);
                     workplaceDomains.add(uri.getHost());
                 } catch (Exception e) {
-                    LOG.error(e.getLocalizedMessage(), e);
+                    LOG.error("Unexpected error: mobb-9cb4588a15b93b47918cdf36247ed87d", e);
                 }
             }
             result.addDomainSet(workplaceDomains);

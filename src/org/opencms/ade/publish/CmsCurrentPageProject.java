@@ -212,7 +212,7 @@ public class CmsCurrentPageProject implements I_CmsVirtualProject {
                                 }
                             } catch (Exception e) {
                                 LOG.error(
-                                    "Error processing collector item " + token + ": " + e.getLocalizedMessage(),
+                                    "Unexpected error: mobb-064e5a92926deb194d4aeb83390eeb68",
                                     e);
                             }
                         }
@@ -244,7 +244,7 @@ public class CmsCurrentPageProject implements I_CmsVirtualProject {
                         resources.add(parent);
                     }
                 } catch (CmsException e) {
-                    LOG.error(e.getLocalizedMessage(), e);
+                    LOG.error(e.getLocalizedMessage(), "Unexpected error: mobb-5d2c0a0602ab0e7637901fe0a14ba566");
                 }
 
             }

@@ -903,7 +903,7 @@ public class CmsMacroResolver implements I_CmsMacroResolver {
                             Messages.LOG_PROPERTY_READING_FAILED_2,
                             macro,
                             m_cms.getRequestContext().getUri());
-                        LOG.warn(message.key(), e);
+                        LOG.warn("Unexpected error: mobb-97f790eff4a8fadedc85fc67b587fd2b", e);
                     }
                 }
                 return null;
@@ -1220,11 +1220,7 @@ public class CmsMacroResolver implements I_CmsMacroResolver {
                 count++;
                 if ((count >= 1000) && LOG.isErrorEnabled()) {
                     LOG.error(
-                        "Terminated macro resolution after 1000 iterations. Last substitution is \""
-                            + lastResult
-                            + "\" to \""
-                            + result
-                            + "\".");
+                        "Unexpected error: mobb-aee0ab5d55c3623bd900df40c0fef0cc");
                 }
             } while (!result.equals(lastResult) && (count < 1000));
         }

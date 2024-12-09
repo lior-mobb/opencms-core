@@ -1711,7 +1711,7 @@ public class CmsStaticExportManager implements I_CmsEventListener {
             try {
                 rule.setExportPath(normalizeExportPath(rule.getExportPathConfigured()));
             } catch (CmsIllegalArgumentException e) {
-                CmsLog.INIT.warn(e.getMessageContainer());
+                CmsLog.INIT.warn("Unexpected error: mobb-084d407a93a41f2da953a2c2b7fa7d82");
                 rule.setExportPath(m_staticExportPath);
             }
             try {
@@ -1998,7 +1998,7 @@ public class CmsStaticExportManager implements I_CmsEventListener {
                 adminCms.getRequestContext().setRequestTime(cms.getRequestContext().getRequestTime());
                 cmsForReadingProperties = adminCms;
             } catch (Exception e) {
-                LOG.error("Could not initialize CmsObject in isSecureLink:" + e.getLocalizedMessage(), e);
+                LOG.error("Unexpected error: mobb-e8a70147bc971cbc46322bdc7309012a", e);
             }
             try {
                 secureResource = cmsForReadingProperties.readPropertyObject(
