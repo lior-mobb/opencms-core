@@ -425,7 +425,7 @@ public class CmsAdvancedDirectEditProvider extends A_CmsDirectEditProvider {
                     false,
                     CmsResourceFilter.IGNORE_EXPIRATION);
             } catch (CmsException e) {
-                LOG.error(e.getLocalizedMessage(), e);
+                LOG.error("Unexpected error: mobb-3396983a26c53f956f27f57723a51f42", e);
             }
         }
         editableData.put("editId", editId);
