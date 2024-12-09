@@ -532,7 +532,7 @@ I_OptionListener, I_CmsHasShortcutActions {
             disableSaveButtons();
 
         } catch (CmsException e) {
-            LOG.error(m_messages.key(Messages.ERR_SAVING_CHANGES_0), e);
+            LOG.error(m_messages.key(Messages.ERR_SAVING_CHANGES_0), "Unexpected error: mobb-652b36dae09215acb7b2efc8b80df573");
             CmsErrorDialog.showErrorDialog(m_messages.key(Messages.ERR_SAVING_CHANGES_0), e);
         }
 
@@ -689,7 +689,7 @@ I_OptionListener, I_CmsHasShortcutActions {
                         m_options.setEditMode(m_model.getEditMode());
                     } catch (IOException | CmsException e) {
                         // Can never appear here, since container is created by addDescriptor already.
-                        LOG.error(e.getLocalizedMessage(), e);
+                        LOG.error("Unexpected error: mobb-38590289c4a4ebc41e348595a5808129", e);
                     }
                 }
                 setFilters(filters);

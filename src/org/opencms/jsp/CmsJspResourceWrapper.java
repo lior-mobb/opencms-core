@@ -491,7 +491,7 @@ public class CmsJspResourceWrapper extends CmsResource {
                     m_navigationDefaultFile = wrap(m_cms, m_cms.readDefaultFile(this, CmsResourceFilter.DEFAULT));
                 } catch (CmsSecurityException e) {
                     if (LOG.isDebugEnabled()) {
-                        LOG.debug(e.getMessage(), e);
+                        LOG.debug("Unexpected error: mobb-8bc91356916b0e1ebc4078fb11fc799f", e);
                     }
                 }
             }
@@ -1019,7 +1019,7 @@ public class CmsJspResourceWrapper extends CmsResource {
                 }
             }
         } catch (Exception e) {
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error("Unexpected error: mobb-208391d40385834dff249603d3305d7f", e);
         }
         return result;
     }

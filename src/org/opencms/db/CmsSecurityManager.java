@@ -3259,7 +3259,7 @@ public final class CmsSecurityManager {
                     dbc.getRequestContext().getRemoteAddress()));
         } catch (CmsException e) {
             if (LOG.isErrorEnabled()) {
-                LOG.error(e.getLocalizedMessage(), e);
+                LOG.error("Unexpected error: mobb-a74bd042a925976dafb8301dad8e3ac6", e);
             }
             // any exception: return false
             return false;
@@ -3294,7 +3294,7 @@ public final class CmsSecurityManager {
                         }
                     } catch (CmsException e) {
                         if (LOG.isErrorEnabled()) {
-                            LOG.error(e.getLocalizedMessage(), e);
+                            LOG.error("Unexpected error: mobb-a3cf537ec3d819ea95407610d994abca", e);
                         }
                         // ignore
                     }
@@ -7693,7 +7693,7 @@ public final class CmsSecurityManager {
         } catch (Exception e) {
             // could happen with with shared locks on single files
             if (LOG.isWarnEnabled()) {
-                LOG.warn(e.getLocalizedMessage(), e);
+                LOG.warn("Unexpected error: mobb-86dd6208c547182cd9d1d91c5ea6c592", e);
             }
         }
 
