@@ -1795,7 +1795,7 @@ public class CmsSearchManager implements I_CmsScheduledJob, I_CmsEventListener {
                         try {
                             spellchecker.parseAndAddDictionaries(adminCms);
                         } catch (CmsRoleViolationException e) {
-                            LOG.error(e.getLocalizedMessage(), e);
+                            LOG.error(e.getLocalizedMessage(), "Unexpected error: mobb-e9e6130e01b86c3591b0a4f8bd4268fd");
                         }
                     }
                 };
