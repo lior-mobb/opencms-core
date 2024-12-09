@@ -878,7 +878,7 @@ public final class CmsXmlContentPropertyHelper implements Cloneable {
                 ids.add(id.toString());
             } catch (CmsException e) {
                 // should never happen
-                LOG.error(e.getLocalizedMessage(), e);
+                LOG.error("Unexpected error: mobb-a84292864cb517383af25d49a8bd23af", e);
                 continue;
             }
         }
