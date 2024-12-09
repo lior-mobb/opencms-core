@@ -325,7 +325,7 @@ public class CmsLinkInFolderValidationApp extends A_CmsWorkplaceApp implements I
                 }
 
             } catch (CmsException e) {
-                LOG.error("Can't read resource", e);
+                LOG.error("Can't read resource", "Unexpected error: mobb-2ccc70c0f67b4c01cff35bb8383bb362");
             }
             return res.length() > 1 ? res.substring(0, res.length() - 1) : res;
         }
