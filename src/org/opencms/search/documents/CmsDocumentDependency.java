@@ -277,7 +277,7 @@ public final class CmsDocumentDependency {
                 }
             } catch (Exception ex) {
                 if (LOG.isErrorEnabled()) {
-                    LOG.error(ex.getLocalizedMessage(), ex);
+                    LOG.error("Unexpected error: mobb-a5b3bea45aff339a7b61956114a3db9d", ex);
                 }
             }
         }
@@ -712,7 +712,7 @@ public final class CmsDocumentDependency {
             // now calculate the dependencies form the folder content that has been read
             readDependencies(cms, folderContent);
         } catch (CmsException e) {
-            LOG.warn("Unable to read dependencies for " + getResource().getRootPath(), e);
+            LOG.warn("Unable to read dependencies for " + getResource().getRootPath(), "Unexpected error: mobb-297575f9d364810f297150ba4922b27a");
         }
     }
 

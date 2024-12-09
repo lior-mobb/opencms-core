@@ -686,7 +686,7 @@ public final class CmsJspStandardContextBean {
                     }
 
                 } catch (CmsException e) {
-                    LOG.error(e.getLocalizedMessage(), e);
+                    LOG.error("Unexpected error: mobb-bb54153a45a27d9694433b59f47f42d1", e);
                 }
                 if (result == null) {
                     result = mapping.m_defaultValue;
@@ -1299,7 +1299,7 @@ public final class CmsJspStandardContextBean {
             }
             return bundleIndex.getBundlePathForKey(messageKey);
         } catch (Exception e) {
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error(e.getLocalizedMessage(), "Unexpected error: mobb-af2b76f4b5da3ce2034f0b8b7e2fcc98");
             return null;
         }
     }
@@ -2104,7 +2104,7 @@ public final class CmsJspStandardContextBean {
                             catService.readCategory(m_cms, (String)categoryPath, getRequestContext().getUri()),
                             m_cms.getRequestContext().getLocale());
                     } catch (CmsException e) {
-                        LOG.warn(e.getLocalizedMessage(), e);
+                        LOG.warn("Unexpected error: mobb-3f8c2794594b8d57e46d8d372080b9c0", e);
                         return null;
                     }
                 }
@@ -3118,7 +3118,7 @@ public final class CmsJspStandardContextBean {
                 try {
                     ancestor = rootCms.readResource(parentFolder, CmsResourceFilter.IGNORE_EXPIRATION);
                 } catch (CmsException e) {
-                    LOG.info(e.getLocalizedMessage(), e);
+                    LOG.info("Unexpected error: mobb-dd2606f9860edbea36eb61f59a1784a8", e);
                     break;
                 }
             }
