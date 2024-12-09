@@ -182,7 +182,7 @@ public class CmsResourceTypeImage extends A_CmsResourceType {
                 try {
                     m_content = simapi.getBytes(orientedCopy, Simapi.getImageType(m_rootPath));
                 } catch (Exception e) {
-                    LOG.error(e.getLocalizedMessage(), e);
+                    LOG.error("Unexpected error: mobb-4ab831288e5d3a9333be1867961d616d", e);
                 }
             }
 

@@ -428,7 +428,7 @@ public class CmsXmlEntityResolver implements EntityResolver, I_CmsEventListener 
                 m_cachePermanent.put(systemId, content);
                 return createInputSource(content, systemId);
             } catch (Throwable t) {
-                LOG.error(t.getLocalizedMessage(), t);
+                LOG.error("Unexpected error: mobb-5af880582b9130321fc6cdccac4e8246", t);
             }
 
         } else if (systemId.substring(0, systemId.lastIndexOf("/") + 1).equalsIgnoreCase(
