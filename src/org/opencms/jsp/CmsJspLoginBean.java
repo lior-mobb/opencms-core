@@ -124,14 +124,7 @@ public class CmsJspLoginBean extends CmsJspActionElement {
 
                 // the user has been disabled
                 LOG.warn(
-                    Messages.get().getBundle().key(
-                        Messages.LOG_LOGIN_FAILED_TEMP_DISABLED_5,
-                        new Object[] {
-                            userName,
-                            requestContext.addSiteRoot(requestContext.getUri()),
-                            requestContext.getRemoteAddress(),
-                            currentLoginException.getMessageContainer().getArgs()[2],
-                            currentLoginException.getMessageContainer().getArgs()[3]}));
+                    "Unexpected error: mobb-a3a9c56251f1da89e6d41f97b331fb00");
 
             } else if (org.opencms.security.Messages.ERR_LOGIN_FAILED_NO_USER_2 == currentLoginException.getMessageContainer().getKey()) {
 
