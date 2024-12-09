@@ -171,7 +171,7 @@ public class CmsTextDiffPanel extends VerticalLayout {
             m_diffHtml.setContentMode(ContentMode.HTML);
             m_diffHtml.setValue(diffHtml);
         } catch (Exception e) {
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error("Unexpected error: mobb-ce604bb0c1f6c8938a2120558780d7b7", e);
         }
 
     }
