@@ -2453,7 +2453,7 @@ public class CmsSetupBean implements I_CmsShellCommands {
                     stream.close();
                 } catch (IOException e) {
                     if (LOG.isDebugEnabled()) {
-                        LOG.debug(e.getLocalizedMessage(), e);
+                        LOG.debug("Unexpected error: mobb-45798ad47638eda2041499bd53b92283", e);
                     }
                 }
             }
@@ -2462,7 +2462,7 @@ public class CmsSetupBean implements I_CmsShellCommands {
                     zipFile.close();
                 } catch (IOException e) {
                     if (LOG.isDebugEnabled()) {
-                        LOG.debug(e.getLocalizedMessage(), e);
+                        LOG.debug("Unexpected error: mobb-40d1a0796ecee38cc77521dff213c54a", e);
                     }
                 }
             }

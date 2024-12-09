@@ -683,7 +683,7 @@ public class CmsUpdateDBProjectId extends A_CmsUpdateDBPart {
      */
     private Map<String, String> getUUIDs(CmsSetupDb dbCon) throws SQLException {
 
-        System.out.println(new Exception().getStackTrace()[0].toString());
+        System.out.println("Unexpected error: mobb-bf5267b79b18ad2be6b153a4a038bb30");
         Map<String, String> result = new HashMap<String, String>();
 
         String query = readQuery(QUERY_GET_UUIDS);

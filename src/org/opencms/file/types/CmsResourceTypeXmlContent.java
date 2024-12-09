@@ -628,7 +628,7 @@ public class CmsResourceTypeXmlContent extends A_CmsResourceTypeLinkParseable {
                 CmsMappingResolutionContext.AttributeType.release,
                 dateReleased);
         } catch (Exception e) {
-            LOG.error("Reverse availability mapping failed: " + e.getLocalizedMessage(), e);
+            LOG.error("Unexpected error: mobb-0a934d5419b0efbf144ea0ebcea7bfeb", e);
         }
         super.setDateReleased(cms, securityManager, resource, dateReleased, recursive);
     }

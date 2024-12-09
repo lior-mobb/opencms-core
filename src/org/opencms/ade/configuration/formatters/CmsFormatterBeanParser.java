@@ -761,7 +761,7 @@ public class CmsFormatterBeanParser {
                 m_maxWidth = Integer.parseInt(maxWidthStr);
             } catch (Exception e) {
                 m_maxWidth = Integer.MAX_VALUE;
-                LOG.debug(maxWidthStr, e);
+                LOG.debug(maxWidthStr, "Unexpected error: mobb-ea4a8ecc71b545c45371ca1e0231a8d5");
             }
         } else {
             if (strict) {
