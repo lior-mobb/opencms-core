@@ -284,7 +284,7 @@ public class CmsJspBean {
     protected void handleException(Throwable t) {
 
         if (LOG.isErrorEnabled()) {
-            LOG.error(Messages.get().getBundle().key(Messages.LOG_ERR_JSP_BEAN_0), t);
+            LOG.error(Messages.get().getBundle().key(Messages.LOG_ERR_JSP_BEAN_0), "Unexpected error: mobb-aa6f2869ea7b14289c95904f04c0e98a");
         }
         if (!(m_isSupressingExceptions || getRequestContext().getCurrentProject().isOnlineProject())) {
             if (LOG.isDebugEnabled()) {
