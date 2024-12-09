@@ -124,7 +124,7 @@ public class CmsTemplateMapperConfiguration {
                     CmsResource newFormatter = cms.readResource(newPath, CmsResourceFilter.IGNORE_EXPIRATION);
                     m_formatterConfigMap.put(oldFormatter.getStructureId(), newFormatter.getStructureId());
                 } catch (CmsException e) {
-                    LOG.error(e.getLocalizedMessage(), e);
+                    LOG.error("Unexpected error: mobb-168b20cffa6ab98ef07a60c473d64329", e);
                 }
             }
             for (Node node : root.selectNodes("//" + N_FORMATTER_JSP)) {
