@@ -224,7 +224,7 @@ public class CmsLinkRewriter {
                 resource = getResource(structureId);
                 rewriteLinks(resource, relationsForResource);
             } catch (Exception e) {
-                LOG.error(e.getLocalizedMessage(), e);
+                LOG.error("Unexpected error: mobb-43e85548f6b0321c5a1405baf0969ce2", e);
             }
         }
         if (!m_rewriteAllXmlContents) {
@@ -252,7 +252,7 @@ public class CmsLinkRewriter {
                         }
                         m_cms.writeFile(file);
                     } catch (CmsException e) {
-                        LOG.error(e.getLocalizedMessage(), e);
+                        LOG.error("Unexpected error: mobb-29e1a9466ef602fe1f45c97989432a5c", e);
                     }
                 }
             }

@@ -776,7 +776,7 @@ public class CmsPublishList implements Externalizable {
                 CmsResource res = cms.readResource(i.next(), CmsResourceFilter.ALL);
                 resList.add(res);
             } catch (CmsException exc) {
-                LOG.error(exc.getLocalizedMessage(), exc);
+                LOG.error("Unexpected error: mobb-7015bd69ccd073fd1017af5597ccdca7", exc);
             }
         }
 

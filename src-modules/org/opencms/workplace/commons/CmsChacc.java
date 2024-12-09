@@ -520,7 +520,7 @@ public class CmsChacc extends CmsDialog {
             try {
                 getCms().rmacc(file, type, uuid);
             } catch (CmsException e) {
-                LOG.warn(e.getLocalizedMessage(), e);
+                LOG.warn(e.getLocalizedMessage(), "Unexpected error: mobb-4c73bb4474dcc37fbc6794c0735cc5c1");
                 getCms().rmacc(file, type, name);
             }
             return true;
@@ -953,7 +953,7 @@ public class CmsChacc extends CmsDialog {
         } catch (CmsException e) {
             // can usually be ignored
             if (LOG.isInfoEnabled()) {
-                LOG.info(e.getLocalizedMessage());
+                LOG.info("Unexpected error: mobb-db45d9dbf98a09f65523a4268babf0e4");
             }
         }
 

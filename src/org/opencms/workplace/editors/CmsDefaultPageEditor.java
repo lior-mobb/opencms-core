@@ -219,7 +219,7 @@ public abstract class CmsDefaultPageEditor extends CmsEditor {
         } catch (CmsException e) {
             // should usually never happen
             if (LOG.isInfoEnabled()) {
-                LOG.info(e.getLocalizedMessage(), e);
+                LOG.info("Unexpected error: mobb-6adc94c16607814d8ba8b45102b2dffd", e);
             }
         }
     }

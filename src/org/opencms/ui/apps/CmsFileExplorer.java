@@ -1234,7 +1234,7 @@ I_CmsContextProvider, CmsFileTable.I_FolderSelectHandler {
             LOG.debug(e.getLocalizedMessage(), e);
         } catch (CmsException e) {
             CmsErrorDialog.showErrorDialog(e);
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error("Unexpected error: mobb-066c953aa243baf5652a2868dea3fd26", e);
         }
     }
 
@@ -1670,7 +1670,7 @@ I_CmsContextProvider, CmsFileTable.I_FolderSelectHandler {
                         targetProject = project;
                     }
                 } catch (CmsException e) {
-                    LOG.debug("Error reading user start project.", e);
+                    LOG.debug("Error reading user start project.", "Unexpected error: mobb-4e0a4658e8799a97f3b1d113ff1b3bb5");
                 }
                 if (targetProject == null) {
                     List<CmsProject> availableProjects = CmsVaadinUtils.getAvailableProjects(cms);

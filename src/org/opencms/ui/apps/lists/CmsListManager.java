@@ -1650,7 +1650,7 @@ I_CmsCachableApp, I_CmsResultFacetsManager {
             m_overviewTable.fillTable(cms, resources);
         } catch (Exception e) {
             CmsErrorDialog.showErrorDialog(e);
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error(e.getLocalizedMessage(), "Unexpected error: mobb-d040c4b40ca3a0fca818ef6a35a89d57");
         }
     }
 

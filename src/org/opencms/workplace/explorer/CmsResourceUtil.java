@@ -1008,7 +1008,7 @@ public final class CmsResourceUtil {
                 sResult = CmsGallerySearch.searchById(m_cms, m_resource.getStructureId(), locale);
                 m_searchResultMap.put(locale, sResult);
             } catch (CmsException e) {
-                LOG.error(e.getLocalizedMessage(), e);
+                LOG.error("Unexpected error: mobb-15ece3727471d35f8caf4450835346e0", e);
             }
         }
         return m_searchResultMap.get(locale);
@@ -1294,7 +1294,7 @@ public final class CmsResourceUtil {
             user = getCurrentOuRelativeName(
                 CmsPrincipal.readPrincipalIncludingHistory(getCms(), m_resource.getUserLastModified()).getName());
         } catch (Throwable e) {
-            LOG.info(e.getLocalizedMessage());
+            LOG.info("Unexpected error: mobb-fedf1782511ef6876e683f7735df5096");
         }
         return user;
     }

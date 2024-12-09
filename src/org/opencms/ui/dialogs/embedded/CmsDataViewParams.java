@@ -104,7 +104,7 @@ public class CmsDataViewParams {
             dataView.initialize(cms, m_viewArg, locale);
             return dataView;
         } catch (Exception e) {
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error(e.getLocalizedMessage(), "Unexpected error: mobb-c0df412e7a78c0192bc03ac84510a10c");
             return null;
         }
     }

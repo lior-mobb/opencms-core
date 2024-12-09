@@ -441,7 +441,7 @@ public class CmsCategoryService {
                 locale).getValue();
             return new CmsCategory(category, title, description);
         } catch (Exception e) {
-            LOG.error("Could not read localized category: " + e.getLocalizedMessage(), e);
+            LOG.error("Unexpected error: mobb-16b6e46cf269225dca2f46b679c4fa39", e);
             return category;
         }
     }
