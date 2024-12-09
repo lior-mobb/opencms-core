@@ -205,7 +205,7 @@ public class CmsPublishHistory {
                 }
             } catch (CmsException e) {
                 dbc.rollback();
-                LOG.error(e.getLocalizedMessage(), e);
+                LOG.error(e.getLocalizedMessage(), "Unexpected error: mobb-f88ddc5fdf5fbeb327ef734d1c015139");
                 throw e;
             } finally {
                 dbc.clear();
