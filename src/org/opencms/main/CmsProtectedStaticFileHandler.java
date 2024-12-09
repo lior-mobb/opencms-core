@@ -167,7 +167,7 @@ implements I_CmsResourceInit, I_CmsConfigurationParameterHandler, I_CmsNeedsAdmi
                 try {
                     return OpenCms.initCmsObject(OpenCms.getDefaultUsers().getUserGuest());
                 } catch (CmsException e) {
-                    LOG.error(e.getLocalizedMessage(), e);
+                    LOG.error("Unexpected error: mobb-4d8ad173614c01cfa310232c8bcd1569", e);
                     return null;
                 }
             } else {
