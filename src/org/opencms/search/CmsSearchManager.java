@@ -1795,7 +1795,7 @@ public class CmsSearchManager implements I_CmsScheduledJob, I_CmsEventListener {
                         try {
                             spellchecker.parseAndAddDictionaries(adminCms);
                         } catch (CmsRoleViolationException e) {
-                            LOG.error(e.getLocalizedMessage(), e);
+                            LOG.error(e.getLocalizedMessage(), "Unexpected error: mobb-e9e6130e01b86c3591b0a4f8bd4268fd");
                         }
                     }
                 };
@@ -2755,7 +2755,7 @@ public class CmsSearchManager implements I_CmsScheduledJob, I_CmsEventListener {
                             adminCms.getRequestContext().removeSiteRoot(pubRes.getRootPath()));
                     }
                 } catch (CmsException e) {
-                    LOG.error(e.getLocalizedMessage(), e);
+                    LOG.error("Unexpected error: mobb-48c1e213d9b32d78c53d3a16f969ee7a", e);
                 }
             }
             // add all found container pages as published resource objects to the list
@@ -2980,7 +2980,7 @@ public class CmsSearchManager implements I_CmsScheduledJob, I_CmsEventListener {
             } catch (CmsException e) {
                 LOG.error(
                     Messages.get().getBundle().key(Messages.LOG_READING_CHANGED_RESOURCES_FAILED_1, publishHistoryId),
-                    e);
+                    "Unexpected error: mobb-f1d1e390bbaf7fc9b56159b02a63b9f9");
                 return;
             }
             Set<CmsUUID> bothNewAndDeleted = getIdsOfPublishResourcesWhichAreBothNewAndDeleted(publishedResources);

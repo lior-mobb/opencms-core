@@ -587,7 +587,7 @@ public class CmsLocaleManager implements I_CmsEventListener {
                 CmsPropertyDefinition.PROPERTY_AVAILABLE_LOCALES,
                 true).getValue();
         } catch (CmsException exc) {
-            LOG.debug("Could not read available locales property for resource " + resourceName, exc);
+            LOG.debug("Could not read available locales property for resource " + resourceName, "Unexpected error: mobb-97f7e810642a62b23380d5adb4ddc2db");
         }
 
         List<Locale> result = null;

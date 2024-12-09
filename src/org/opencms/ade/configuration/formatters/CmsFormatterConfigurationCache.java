@@ -249,7 +249,7 @@ public class CmsFormatterConfigurationCache implements I_CmsGlobalConfigurationC
             CmsResourceFilter filter = CmsResourceFilter.ONLY_VISIBLE_NO_DELETED.addRequireType(type);
             settingConfigResources.addAll(m_cms.readResources("/", filter));
         } catch (CmsException e) {
-            LOG.warn(e.getLocalizedMessage(), e);
+            LOG.warn("Unexpected error: mobb-2f95585dbdb08ce8dadcd2c73b8013cc", e);
         }
 
         Map<CmsUUID, Map<CmsSharedSettingKey, CmsXmlContentProperty>> sharedSettingsByStructureId = new HashMap<>();
@@ -267,7 +267,7 @@ public class CmsFormatterConfigurationCache implements I_CmsGlobalConfigurationC
             CmsResourceFilter filter = CmsResourceFilter.ONLY_VISIBLE_NO_DELETED.addRequireType(type);
             formatterResources.addAll(m_cms.readResources("/", filter));
         } catch (CmsException e) {
-            LOG.warn(e.getLocalizedMessage(), e);
+            LOG.warn("Unexpected error: mobb-fd4d172b1e755059965f45438287b770", e);
         }
         try {
             I_CmsResourceType type = OpenCms.getResourceManager().getResourceType(TYPE_MACRO_FORMATTER);
@@ -281,7 +281,7 @@ public class CmsFormatterConfigurationCache implements I_CmsGlobalConfigurationC
             CmsResourceFilter filterFunction = CmsResourceFilter.ONLY_VISIBLE_NO_DELETED.addRequireType(typeFunction);
             formatterResources.addAll(m_cms.readResources("/", filterFunction));
         } catch (CmsException e) {
-            LOG.warn(e.getLocalizedMessage(), e);
+            LOG.warn("Unexpected error: mobb-b6789fe12ca7aa202581607c022e98c3", e);
         }
         Map<CmsUUID, I_CmsFormatterBean> newFormatters = Maps.newHashMap();
         for (CmsResource formatterResource : formatterResources) {

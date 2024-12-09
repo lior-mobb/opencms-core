@@ -382,7 +382,7 @@ public class CmsDbExportView extends VerticalLayout {
                         }
                     } catch (CmsException e) {
                         if (!(e instanceof CmsVfsResourceNotFoundException)) {
-                            LOG.error(e.getLocalizedMessage());
+                            LOG.error("Unexpected error: mobb-8f9505f7ff71e7b861de4f67e217b0f3");
                         }
                     }
                 }

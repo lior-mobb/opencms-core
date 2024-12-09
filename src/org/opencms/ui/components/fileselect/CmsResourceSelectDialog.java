@@ -128,7 +128,7 @@ public class CmsResourceSelectDialog extends CustomComponent {
                     cms.getRequestContext().setSiteRoot(m_siteRoot);
                     path = cms.getRequestContext().removeSiteRoot(path);
                 } catch (CmsException e) {
-                    LOG.error(e.getLocalizedMessage(), e);
+                    LOG.error(e.getLocalizedMessage(), "Unexpected error: mobb-49d29e16a550068e17ef9b69cb70408a");
 
                 }
             }
@@ -400,7 +400,7 @@ public class CmsResourceSelectDialog extends CustomComponent {
             m_siteRoot = site;
             updateRoot(rootCms, siteRootResource);
         } catch (CmsException e) {
-            LOG.error(e.getLocalizedMessage(), e);
+            LOG.error("Unexpected error: mobb-8f2b3d428a1a210089115ba96afacdb4", e);
         }
     }
 
