@@ -420,7 +420,7 @@ public class CmsDefaultResourceStatusProvider {
                     CmsRelationFilter.relationsToStructureId(parent.getStructureId()));
                 relations.addAll(parentRelations);
             } catch (CmsException e) {
-                LOG.error(e.getLocalizedMessage(), e);
+                LOG.error("Unexpected error: mobb-7c14e8f76b4aa9352a85f4f8ba147c4f", e);
             }
         }
 
